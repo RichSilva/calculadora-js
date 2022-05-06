@@ -125,16 +125,12 @@ function verificarValor() {
         }
         valor = (display.value).replace(',', '.');
         firstValue = parseFloat(valor);
-        console.log(firstValue);
         conta = `${firstValue}`;
-        console.log(conta);
     } else {
         let oper = display.value.slice(0, 1);
         valor = (display.value).replace(',', '.');
         secondValue = parseFloat(valor.slice(1));
-        console.log(secondValue);
         conta += ` ${oper} ${secondValue}`;
-        console.log(conta);
         calcularResultado();
     }
 }
@@ -164,8 +160,6 @@ function calcularResultado() {
                 window.alert('Erro! Algo de errado não está certo...')
         }
     }
-    console.log(resultado);
-    console.log(firstValue);
     firstValue = resultado;
 }
 
@@ -178,7 +172,6 @@ function calcularFatorial() {
     }
     for (let i = 1; i < fatorial; i++) {
         resultado *= i;
-        console.log(resultado);
     }
     window.alert(`Resultado: \n ${fatorial}! = ${resultado}`);
     display.value = '';
